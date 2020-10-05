@@ -9,7 +9,8 @@ function initDb() {
         username: "postgres",
         password: "postgres",
         database: "todos",
-        entities: Object.values(entity)
+        entities: Object.values(entity),
+        logging: "all"
     })
 }
 export { initDb }

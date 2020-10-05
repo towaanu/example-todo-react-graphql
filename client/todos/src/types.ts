@@ -3,3 +3,8 @@ export interface Todo {
     label: string
     isDone: boolean
 }
+
+export interface TodoInput {
+    label: string
+    isDone?: boolean
+}

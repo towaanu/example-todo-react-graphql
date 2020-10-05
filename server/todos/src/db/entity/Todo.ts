@@ -9,7 +9,7 @@ class Todo {
     @Column()
     label!: string;
 
-    @Column({ name: "is_done", nullable: true })
+    @Column({ name: "is_done", nullable: false, default: false })
     isDone!: boolean;
 
     @CreateDateColumn({ name: "created_at" })
