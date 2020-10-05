@@ -1,7 +1,10 @@
 import { ApolloServer } from 'apollo-server';
 import { typeDefs, resolvers } from './graphql';
 
-const server = new ApolloServer({ typeDefs, resolvers });
+const server = new ApolloServer({ 
+    typeDefs, 
+    resolvers: resolvers as any
+});
 
 server.listen({ port: 8050 })
     .then(({ url }) => {
