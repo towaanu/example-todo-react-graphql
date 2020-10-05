@@ -1,9 +1,10 @@
 import React from 'react';
+import Todos from './containers/Todos';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello todo !</h1>
+    <div>
+      <Todos />
     </div>
   );
 }
