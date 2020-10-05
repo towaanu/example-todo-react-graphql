@@ -1,0 +1,2 @@
+# example todos react graphql
+You can find more information in [client](https://github.com/towaanu/example-todo-react-graphql/tree/main/client) and [server](https://github.com/towaanu/example-todo-react-graphql/tree/main/server) folders.

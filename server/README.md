@@ -11,16 +11,8 @@ The script will start 3 containers :
 
 *You can find more information about started containers in `docker-compose.yml`*
 
-### Run the app 
 When you run `run.docker.sh`, you should have an access to the node_web container.  
-Inside the container you can run the following commands.  
-#### Install depedencies
-`npm install`
-#### Create the database
-`npm run typeorm:migration:run`   
-#### Run the graphql server
-`npm start`   
-The server should be accessible at http://localhost:8050
+Inside the container you can go to the "Run the app" section.
 
 ## Without docker
 If you don't have docker, you need 2 things to launch the server :   
@@ -31,3 +23,12 @@ You need to be at the root of the `todos` folder before running "Run the app" co
 `cd ./todos`
 
 You can then follow steps described in "Run the app" section.
+
+## Run the app 
+### Install depedencies
+`npm install`
+### Create the database
+`npm run typeorm:migration:run`   
+### Run the graphql server
+`npm start`   
+The server should be accessible at http://localhost:8050
