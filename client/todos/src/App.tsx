@@ -1,10 +1,14 @@
 import React from 'react';
+import { ApolloProvider } from '@apollo/client';
+import apolloClient from './apolloClient';
 import Todos from './containers/Todos';
 
 function App() {
   return (
     <div>
-      <Todos />
+      <ApolloProvider client={apolloClient}>
+        <Todos />
+      </ApolloProvider>
     </div>
   );
 }
