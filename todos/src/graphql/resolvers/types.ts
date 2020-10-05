@@ -7,12 +7,30 @@ type ResolverFunctionGeneric<Parent, Args, Context, Info, Result> = (parent: Par
 interface GraphqlContext { }
 type ResolverFunction<Args, Result> = ResolverFunctionGeneric<{}, Args, GraphqlContext, GraphQLResolveInfo, Result>
 
+export interface Todo {
+    id: number,
+    label: string,
+    isDone: boolean
+}
+
+export interface TodoInput {
+    label: string,
+    isDone: boolean
+}
+
 interface Query {
     hello: ResolverFunction<{}, "world">
+    todos: ResolverFunction<{}, Todo[]>
+}
+
+interface Mutation {
+    createTodo: ResolverFunction<{ todo: TodoInput }, Todo>
 }
 
 interface RootResolver {
-    Query: Query
+    Date: GraphQLScalarType,
+    Query: Query,
+    Mutation: Mutation
 }
 
 export { RootResolver }

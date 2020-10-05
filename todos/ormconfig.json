@@ -1,0 +1,24 @@
+{
+   "type": "postgres",
+   "host": "postgres_db",
+   "port": 5432,
+   "username": "postgres",
+   "password": "postgres",
+   "database": "todos",
+   "synchronize": false,
+   "logging": true,
+   "entities": [
+      "dist/db/entity/**/*.js"
+   ],
+   "migrations": [
+      "dist/db/migration/**/*.js"
+   ],
+   "subscribers": [
+      "src/db/subscriber/**/*.ts"
+   ],
+   "cli": {
+      "entitiesDir": "src/db/entity",
+      "migrationsDir": "src/db/migration",
+      "subscribersDir": "src/db/subscriber"
+   }
+}
