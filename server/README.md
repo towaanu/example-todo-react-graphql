@@ -18,7 +18,6 @@ Inside the container you can run the following commands.
 `npm install`
 #### Create the database
 `npm run typeorm:migration:run`   
-This command should create the database  
 #### Run the graphql server
 `npm start`   
 The server should be accessible at http://localhost:8050
