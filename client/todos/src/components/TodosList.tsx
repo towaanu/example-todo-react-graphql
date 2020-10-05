@@ -4,13 +4,18 @@ import Todo from './Todo';
 
 interface Props {
     todos: TodoType[]
+    onToggleTodo: (todo: TodoType) => void
 }
 
-function TodosList({ todos }: Props) {
+function TodosList({ todos, onToggleTodo }: Props) {
+
     return (
     <ul>
             {todos.map(todo => 
-                <Todo key={todo.id} todo={todo} />
+                <Todo 
+                    key={todo.id} 
+                    todo={todo} 
+                    onToggleTodo={onToggleTodo} />
             )}
     </ul>
     )
