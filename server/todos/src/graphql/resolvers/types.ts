@@ -15,7 +15,12 @@ export interface Todo {
 
 export interface TodoInput {
     label: string,
-    isDone: boolean
+    isDone?: boolean
+}
+
+export interface TodoUpdateInput {
+    label?: string
+    isDone?: boolean 
 }
 
 interface Query {
@@ -25,6 +30,7 @@ interface Query {
 
 interface Mutation {
     createTodo: ResolverFunction<{ todo: TodoInput }, Todo>
+    updateTodo: ResolverFunction<{id:string, todo: TodoUpdateInput}, Todo | undefined>
 }
 
 interface RootResolver {

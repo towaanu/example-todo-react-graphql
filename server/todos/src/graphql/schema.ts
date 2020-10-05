@@ -18,6 +18,11 @@ const todoTypes = `
     label: String!
     isDone: Boolean
   }
+
+  input TodoUpdateInput {
+    label: String
+    isDone: Boolean
+  }
 `
 
 const typeDefs = gql`
@@ -31,6 +36,7 @@ const typeDefs = gql`
 
   type Mutation {
     createTodo(todo: TodoInput!): Todo!
+    updateTodo(id: ID!, todo: TodoUpdateInput): Todo
   }
 
 
