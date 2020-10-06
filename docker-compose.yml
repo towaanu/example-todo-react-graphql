@@ -1,14 +1,12 @@
 version: '3'
 services:
     client_web:
-        # image: todos:react-client
         build:
             context: .
             dockerfile: ./docker_configs/client/Dockerfile
         ports:
             - 3000:80
     node_web:
-        # image: todos:node-server
         build:
             context: .
             dockerfile: ./docker_configs/server/Dockerfile
