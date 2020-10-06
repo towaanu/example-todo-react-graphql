@@ -10,11 +10,5 @@ do
   sleep 2
 done
 
-# typeorm migration:run
 ./node_modules/.bin/typeorm migration:run
 node dist/main.js
-
-# bin="/app/bin/kaimono"
-# eval "$bin eval \"Kaimono.Release.migrate\""
-# # start the elixir application
-# exec "$bin" "start"
