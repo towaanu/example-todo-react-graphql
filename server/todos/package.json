@@ -5,6 +5,7 @@
    "main": "main.ts",
    "scripts": {
       "start": "tsc && node dist/main.js",
+      "build": "tsc",
       "typeorm:migration:run": "tsc && typeorm migration:run",
       "typeorm:migration:revert": "tsc && typeorm migration:revert",
       "test": "echo \"Error: no test specified\" && exit 1"
